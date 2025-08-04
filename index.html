@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="media/logo.png" alt="Our logo">
+        <h2></h2>
+        <nav>
+            <div>About</div>
+            <div>Convert</div>                       
+            <div>Sponsers</div>                       
+            <div>Policy</div>                       
+        </nav>
+    </header>
+    <main>
+        <section class="introSection">
+            <div>
+                <h1>Converter Hub</h1>
+            Welcome to our <strong>Converter Hub...</strong> where we allow you to perfom 
+            diferrent kinds of convertions such as the following: 
+            <ul>
+                <li>File Transfer Calculator</li>
+                <li>Temperature Converter</li>
+                <li>Scientic Notation.... More</li>
+            </ul>
+            </div>
+            <img src="media/logoAlone.png" alt="logo">
+        </section>
+        <section class="convertertSection">
+            <div id="Card">
+                <h3>Converter Hub</h3>
+                <p>A collection of useful convertion tools</p>
+                <div id="theButtons">
+                    <button onclick="displayCard('card1')">File Transfer</button>
+                    <button onclick="displayCard('card2')">Temperature</button>
+                    <button onclick="displayCard('card3')">Scientific</button>
+                    <button onclick="displayCard('card4')">Metric</button>
+                </div>
+                <div id="card1" class="card">
+                <p style="text-align: start; margin-left: 50px;">
+                    File Transfere Time Calculator</p>
+                <table>
+                    <tr>
+                        <td>
+                            File Size<br>
+                            <input type="number" id="" min="0" max="15" step="0.5">
+                            <select  id="">
+                                <option value="">Gigabytes(GB)</option>
+                                <option value="">Megabytes(MB)</option>
+                                <option value="">Kilobytes(KB)</option>
+                            </select>                           
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td>
+                            Internet Speed <br>
+                            <input type="number" id="" min="0" max="15" step="0.5">
+                            <select name="" id="">
+                                <option  value="">Megabytes(MB)</option>
+                                <option  value="">Gigabytes(GB)</option>
+                                <option  value="">Kilobytes(KB)</option>
+                            </select>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button>Calculate</button></td>
+                    </tr>
+                </table>   
+                </div> 
+                <div id="card2" class="card">
+                <p style="text-align: start; margin-left: 50px;">
+                    Temperature Convetor</p>
+                <table id="table2">
+                    <tr>
+                        <td>
+                            Value To Convert <br>
+                            <input type="number" id="" min="0" max="40" step="0.5">                          
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td>
+                            From <br>
+                            <select name="" id="">
+                                <option value="c">Celsius (°C)</option>
+                                <option value="F">Fahrenheit (°F)</option>
+                            </select>                     
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button>Convert</button></td>
+                    </tr>
+                </table>   
+                </div> 
+               <div id="card3" class="card">
+                <p style="text-align: start; margin-left: 50px;">
+                    Scientific Notation Convetor</p>
+                <table id="table3">
+                    <tr>
+                        <td>
+                            Standard Number<br>
+                            <input type="number" id="" min="0" max="10000" step="0.1">                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button>Convert</button></td>
+                    </tr>
+                </table>   
+                </div> 
+                <div id="card4" class="card">
+                <p style="text-align: start; margin-left: 50px;">
+                    Matric Prefix Convetor</p>
+                <table id="table4">
+                    <tr>
+                        <td>
+                            Value<br>
+                            <input type="number" id="" min="0" max="10000" step="1">                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="display: inline-flex; gap: 10px;">
+                            <div>
+                                From <br>
+                                <select name="" id="">
+                                    <option value="">Giga(G)</option>
+                                    <option value="">Mega(M)</option>
+                                    <option value="">Kilo(K)</option>
+                                    <option value="">Base Unit</option>
+                                    <option value="">milli(m)</option>
+                                    <option value="">micro</option>
+                                </select>
+                            </div>
+                            <div>
+                                To: <br>
+                                <select name="" id="">
+                                    <option value="">Giga(G)</option>
+                                    <option value="">Mega(M)</option>
+                                    <option value="">Kilo(K)</option>
+                                    <option value="">Base Unit</option>
+                                    <option value="">milli(m)</option>
+                                    <option value="">micro</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button>Convert</button></td>
+                    </tr>
+                </table>   
+                </div> 
+            </div>
+        </section>
+        <section class="infoAbout"></section>
+        <section class="sponsers"></section>
+        <section class="policy"></section>
+    </main>
+    
+
+
+
+    <footer style="background-color:#222; color:white; text-align:center; padding:15px; margin-top:20px;">
+    <p>&copy; 2025 Your Website Name. All rights reserved.</p>
+    <p>
+        <a href="#about" style="color:#f1c40f; text-decoration:none; margin:0 10px;">About</a> |
+        <a href="#contact" style="color:#f1c40f; text-decoration:none; margin:0 10px;">Contact</a> |
+        <a href="#privacy" style="color:#f1c40f; text-decoration:none; margin:0 10px;">Privacy Policy</a>
+    </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
