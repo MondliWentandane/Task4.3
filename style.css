@@ -8,43 +8,41 @@ header{
     border-end-start-radius: 54px;
     border-bottom-right-radius: 820px;
     width: 100%;
-    height: 17%;
-    box-shadow: 25px 25px 15px rgb(80, 80, 129);
+    height: 7%;
+    box-shadow: 25px 10px 15px rgb(80, 80, 129);
     
     display: inline-flex;
     justify-content: space-between;
 
 }
 h1{
-    box-shadow: 15px 20px 25px;
+    box-shadow: 15px 15px 25px;
     border-radius: 20px;
 }
 header img{
-    width: 270px;
-    height: 150px;
-    
+    width: 120px;
+    height: 70px;
 }
 nav{
     display: inline-flex;
     gap: 20px;
     margin-right: 70px;
-    margin-top: 60px;
+    margin-top: 15px;
 }
 nav div{
     background-color: rgb(231, 240, 151);
     color: rgb(65, 65, 119);
-    font-size: 25px;
+    font-size: 18px;
     font-style: oblique;
-    
     
     border-radius: 20px;
     height: 40%;
-    width: 120px;
+    width: 70px;
     text-align: center;
 }
 
 main{
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 /*=== My styling for the about section ====*/
@@ -66,7 +64,7 @@ main{
     text-align: center;
     font-size: 29px;
     width: 700px;
-    height: 500px;
+    height: fit-content;
     margin-left: 2.5%;
     margin-bottom: 4%;
     border-radius: 20px;
@@ -129,7 +127,34 @@ table{
         width: 100%;
     }
 }
+
+td button{
+    margin-bottom: 35px;
+}
+
+
 .card{
     display: none;
+}
+.theOutcomeDisplayer{
+    background-color: aliceblue;
+    width: 60%;
+    height: 50px;
+    margin-left: 47px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    display: none;
+    border-left-style: solid;
+    border-left-color: rgb(155, 179, 111);
+    border-left-width: 10px;
+
+    border-top-style: solid;
+    border-top-color: rgb(155, 179, 111);
+    border-top-width: 10px;
+
+    border-bottom-style: solid;
+    border-bottom-color: rgb(155, 179, 111);
+    border-bottom-width: 10px;
 }
 

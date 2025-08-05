@@ -48,27 +48,27 @@
                     <tr>
                         <td>
                             File Size<br>
-                            <input type="number" id="" min="0" max="15" step="0.5">
-                            <select  id="">
-                                <option value="">Gigabytes(GB)</option>
-                                <option value="">Megabytes(MB)</option>
-                                <option value="">Kilobytes(KB)</option>
+                            <input type="number" id="userFileSize" min="0" max="15" step="0.5">
+                            <select  id="userFileType">
+                                <option value="g">Gigabytes(GB)</option>
+                                <option value="m">Megabytes(MB)</option>
+                                <option value="k">Kilobytes(KB)</option>
                             </select>                           
                         </td>
                     </tr>
                     <tr>    
                         <td>
                             Internet Speed <br>
-                            <input type="number" id="" min="0" max="15" step="0.5">
-                            <select name="" id="">
-                                <option  value="">Megabytes(MB)</option>
-                                <option  value="">Gigabytes(GB)</option>
-                                <option  value="">Kilobytes(KB)</option>
+                            <input type="number" id="userIntSpeed" min="0" max="15" step="0.5">
+                            <select id="userIntType">
+                                <option  value="m">Megabytes(MB)</option>
+                                <option  value="g">Gigabytes(GB)</option>
+                                <option  value="k">Kilobytes(KB)</option>
                             </select>                            
                         </td>
                     </tr>
                     <tr>
-                        <td><button>Calculate</button></td>
+                        <td><button onclick="getSpeed()">Calculate</button></td>
                     </tr>
                 </table>   
                 </div> 
@@ -79,20 +79,20 @@
                     <tr>
                         <td>
                             Value To Convert <br>
-                            <input type="number" id="" min="0" max="40" step="0.5">                          
+                            <input type="number" id="userValue" min="0" max="40" step="0.5">                          
                         </td>
                     </tr>
                     <tr>    
                         <td>
                             From <br>
-                            <select name="" id="">
+                            <select id="userFromType">
                                 <option value="c">Celsius (°C)</option>
-                                <option value="F">Fahrenheit (°F)</option>
+                                <option value="f">Fahrenheit (°F)</option>
                             </select>                     
                         </td>
                     </tr>
                     <tr>
-                        <td><button>Convert</button></td>
+                        <td><button onclick="convertValue()">Convert</button></td>
                     </tr>
                 </table>   
                 </div> 
@@ -103,55 +103,57 @@
                     <tr>
                         <td>
                             Standard Number<br>
-                            <input type="number" id="" min="0" max="10000" step="0.1">                          
+                            <input type="number" id="userValueSci" min="0" max="10000" step="0.1">                          
                         </td>
                     </tr>
                     <tr>
-                        <td><button>Convert</button></td>
+                        <td><button onclick="getScientificValue()">Convert</button></td>
                     </tr>
                 </table>   
                 </div> 
                 <div id="card4" class="card">
                 <p style="text-align: start; margin-left: 50px;">
-                    Matric Prefix Convetor</p>
+                    Metric Prefix Convetor</p>
                 <table id="table4">
                     <tr>
                         <td>
                             Value<br>
-                            <input type="number" id="" min="0" max="10000" step="1">                          
+                            <input type="number" id="userVal" min="0" max="10000" step="1">                          
                         </td>
                     </tr>
                     <tr>
                         <td style="display: inline-flex; gap: 10px;">
                             <div>
                                 From <br>
-                                <select name="" id="">
-                                    <option value="">Giga(G)</option>
-                                    <option value="">Mega(M)</option>
-                                    <option value="">Kilo(K)</option>
-                                    <option value="">Base Unit</option>
-                                    <option value="">milli(m)</option>
-                                    <option value="">micro</option>
+                                <select id="fromType">
+                                    <option value="gg">Giga(G)</option>
+                                    <option value="mg">Mega(M)</option>
+                                    <option value="kl">Kilo(K)</option>
+                                    <option value="bu">Base Unit</option>
+                                    <option value="ml">milli(m)</option>
+                                    <option value="mc">micro</option>
                                 </select>
                             </div>
                             <div>
                                 To: <br>
-                                <select name="" id="">
-                                    <option value="">Giga(G)</option>
-                                    <option value="">Mega(M)</option>
-                                    <option value="">Kilo(K)</option>
-                                    <option value="">Base Unit</option>
-                                    <option value="">milli(m)</option>
-                                    <option value="">micro</option>
+                                <select id="toType">
+                                    <option value="gg">Giga(G)</option>
+                                    <option value="mg">Mega(M)</option>
+                                    <option value="kl">Kilo(K)</option>
+                                    <option value="bu">Base Unit</option>
+                                    <option value="ml">milli(m)</option>
+                                    <option value="mc">micro</option>
                                 </select>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td><button>Convert</button></td>
+                        <td><button onclick="getNewMetric()">Convert</button></td>
                     </tr>
                 </table>   
-                </div> 
+                </div>
+                <div class="theOutcomeDisplayer" id="theDisplayer">                    
+                </div>
             </div>
         </section>
         <section class="infoAbout"></section>
@@ -163,11 +165,11 @@
 
 
     <footer style="background-color:#222; color:white; text-align:center; padding:15px; margin-top:20px;">
-    <p>&copy; 2025 Your Website Name. All rights reserved.</p>
+    <p>&copy; 2025 CodeTrribe. All rights reserved.</p>
     <p>
-        <a href="#about" style="color:#f1c40f; text-decoration:none; margin:0 10px;">About</a> |
-        <a href="#contact" style="color:#f1c40f; text-decoration:none; margin:0 10px;">Contact</a> |
-        <a href="#privacy" style="color:#f1c40f; text-decoration:none; margin:0 10px;">Privacy Policy</a>
+        <a href="about" style="color:#f1c40f; text-decoration:none; margin:0 10px;">About</a> |
+        <a href="contact" style="color:#f1c40f; text-decoration:none; margin:0 10px;">Contact</a> |
+        <a href="privacy" style="color:#f1c40f; text-decoration:none; margin:0 10px;">Privacy Policy</a>
     </p>
     </footer>
 
