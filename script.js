@@ -127,8 +127,12 @@ function convertValue(){
 
 //================================== For Scientific Notation Converter ===============================
 // ===== The function below I am calcu;ation the scientific Value ===
-function getScientificValue(userValue){
-
+function getSciV(userValue){
+    let num = Number(userValue);
+    if (isNaN(num)) {
+        return "Invalid number";
+    }
+    return num.toExponential();
 }
 //==== Below is the function that will take place if the user press under Scientific convertion
 function getScientificValue(){
@@ -136,6 +140,10 @@ function getScientificValue(){
     let userValue = userValueInp.value;
 
     if(userValue !== ""){
+        let ansValue = getSciV(userValue);
+        document.getElementById("theDisplayer").innerHTML = 
+                       `<strong>Outcome:</strong><br> ${ansValue}`;
+        document.getElementById("theDisplayer").style.display="block";             
 
     }else{
         alert("Please enter value to convert...!!!")
